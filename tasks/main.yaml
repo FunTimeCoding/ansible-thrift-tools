@@ -12,11 +12,5 @@
     dest: '{{ ansible_user_dir }}/src/thrift-tools/tmp/ethernet-device.txt'
 
 - template:
-    src: domain-linux.txt
+    src: domain.txt
     dest: '{{ ansible_user_dir }}/src/thrift-tools/tmp/domain.txt'
-  when: ansible_system == 'Linux'
-
-- template:
-    src: domain-macos.txt
-    dest: '{{ ansible_user_dir }}/src/thrift-tools/tmp/domain.txt'
-  when: ansible_system == 'Darwin'
