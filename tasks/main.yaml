@@ -8,14 +8,8 @@
     state: directory
 
 - template:
-    src: ethernet-device-linux.txt
+    src: ethernet-device.txt
     dest: '{{ ansible_user_dir }}/src/thrift-tools/tmp/ethernet-device.txt'
-  when: ansible_system == 'Linux'
-
-- template:
-    src: ethernet-device-macos.txt
-    dest: '{{ ansible_user_dir }}/src/thrift-tools/tmp/ethernet-device.txt'
-  when: ansible_system == 'Darwin'
 
 - template:
     src: domain-linux.txt
